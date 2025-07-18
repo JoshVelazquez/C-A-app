@@ -26,4 +26,8 @@ export class ProductosService {
   obtenerProductosNinos() {
     return this.http.get<ProductoDTO[]>(this.url + '/ropa-ninos');
   }
+
+  obtenerProductoPorId(id: string) {
+    return this.http.get<ProductoDTO>(`${this.url}/${id}`);
+  }
 }

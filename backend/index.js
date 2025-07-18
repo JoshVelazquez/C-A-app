@@ -53,6 +53,19 @@ app.get("/api/productos/ropa-ninos", (req, res) => {
   });
 });
 
+app.get("/api/productos/:id", (req, res) => {
+  const id = req.params.id;
+  const sql =
+    "SELECT Id AS id,Nombre AS nombre, Descripcion AS descripcion, Imagen AS imagen, Precio As precio, Tipo As tipo FROM productos WHERE Id = ?";
+  db.query(sql, [id], (err, results) => {
+    if (err) return res.status(500).json({ error: err });
+    if (results.length === 0) {
+      return res.status(404).json({ error: "Producto no encontrado" });
+    }
+    res.json(results[0]);
+  });
+});
+
 app.listen(port, () => {
   console.log(`Servidor corriendo en http://localhost:${port}`);
 });

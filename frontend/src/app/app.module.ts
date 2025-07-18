@@ -10,6 +10,8 @@ import { MujerComponent } from './pages/mujer/mujer.component';
 import { NinosComponent } from './pages/ninos/ninos.component';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { LoadingComponent } from './components/loading/loading.component';
+import { ProductoComponent } from './pages/producto/producto.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { HttpClientModule } from '@angular/common/http';
     PrincipalComponent,
     HombreComponent,
     MujerComponent,
-    NinosComponent
+    NinosComponent,
+    LoadingComponent,
+    ProductoComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,15 @@
+.circulo {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  background-color: lightgrey;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #464646;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken(lightgrey, 20%);
+  }
+}

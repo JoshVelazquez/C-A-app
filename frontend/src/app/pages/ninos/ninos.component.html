@@ -19,7 +19,11 @@
             <p class="card-text">
               {{ producto.precio | currency : "MXN" : "symbol-narrow" }}
             </p>
-            <button type="button" class="btn btn-primary">
+            <button
+              type="button"
+              class="btn btn-primary"
+              routerLink="/producto/{{ producto.id }}"
+            >
               Ver más <i class="fa-solid fa-chevron-right"></i>
             </button>
           </div>
