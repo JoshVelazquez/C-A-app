@@ -1,0 +1,30 @@
+<div class="row mt-3">
+  <div class="col-12">
+    <h3>Productos niños</h3>
+  </div>
+</div>
+<div class="row mt-3">
+  <div class="col-12">
+    <div class="productos">
+      <div class="producto" *ngFor="let producto of productos">
+        <div class="card">
+          <i class="fa-solid fa-heart corazon"></i>
+          <img
+            class="card-img-top"
+            src="{{ 'assets/images/' + producto.imagen }}"
+            alt="{{ producto.nombre }}"
+          />
+          <div class="card-body">
+            <h5 class="card-title">{{ producto.nombre }}</h5>
+            <p class="card-text">
+              {{ producto.precio | currency : "MXN" : "symbol-narrow" }}
+            </p>
+            <button type="button" class="btn btn-primary">
+              Ver más <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
